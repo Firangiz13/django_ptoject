@@ -11,76 +11,76 @@
     <link rel="stylesheet" href="{% static 'shop/css/checkout.css' %}">
 </head>
 <body>
-    {{form}}
-   <h2>Checkout Form</h2>
-   <div class="row">
-       <div class="col-75">
-           <div class="container">
-               <div class="row">
-                   <div class="col-50">
-                       <h3>Billing Address</h3>
-                       <label for="fname"><i class="fas fa-user"><span class="titles">Full Name</span></i></label>
-                       <input type="text" id="fname" name="firstname" placeholder="John Doe">
-                       <label for="email"><i class="fas fa-envelope"><span class="titles">Email</span></i></label>
-                       <input type="text" id="fname" name="email" placeholder="johndoe@gmail.com">
-                       <label for="adr"><i class="fa fa-address-card-o"><span class="titles">Address</span></i></label>
-                       <input type="text" id="fname" name="address" placeholder="John Doe">
-                       <label for="city"><i class="fa fa-institution"><span class="titles">City</span></i></label>
-                       <input type="text" id="fname" name="city" placeholder="Baku">
-                       <div class="row">
-                           <div class="col-50">
-                               <label for="state">State</label>
-                               <input type="text" id="state" name="state" placeholder="Azerbaijan">
-                            </div>
-                            <div class="col-50">
-                                <label for="zip">Zip Code</label>
-                                <input type="text" id="zip" name="zip" placeholder="AZ1119">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-50">
-                        <h3>Payment</h3>
-                        <label for="fname">Accepted Cards</label>
-                        <div class="icon-container">
-                            <i class="fa fa-cc-visa" style="color:navy;"></i>
-                            <i class="fa fa-cc-amex" style="color:blue;"></i>
-                            <i class="fa fa-cc-mastercard" style="color:red;"></i>
-                            <i class="fa fa-cc-discover" style="color:orange;"></i>
-                        </div>
-                        <label for="cname">Name on Card</label>
-                        <input type="text" id="cname" name="cardname" placeholder="John More Doe">
-                        <label for="ccnum">Credit card number</label>
-                        <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
-                        <label for="expmonth">Exp Month</label>
-                        <input type="text" id="expmonth" name="expmonth" placeholder="September">
-                        <div class="row">
-                            <div class="col-50">
-                                <label for="expyear">Exp Year</label>
-                                <input type="text" id="expyear" name="expyear" placeholder="2018">
-                            </div>
-                            <div class="col-50">
-                                <label for="cvv">CVV</label>
-                                <input type="text" id="cvv" name="cvv" placeholder="352">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <input type="submit" value="Continue to checkout" class="btn">
-            </form>
-        </div>
-    </div>
-    <div class="col-25">
+    <form action = "" method = "post">
+        {% csrf_token %}
+        <h2 style="margin-bottom:20px">Checkout Form</h2>
+        <div class="row">
+        <div class="col-75">
         <div class="container">
-            <h4>Cart <span class="price" style="color:white"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
-            <p><a href="#">Product 1</a> <span class="price">$15</span></p>
-            <p><a href="#">Product 2</a> <span class="price">$5</span></p>
-            <p><a href="#">Product 3</a> <span class="price">$8</span></p>
-            <p><a href="#">Product 4</a> <span class="price">$2</span></p>
-            <hr>
-            <p class="total">Total <span class="price" style="color:#fff"><b>$30</b></span></p>
+        <div class="row">
+        <div class="col-50">
+        <h3>Billing Address</h3>
+        
+        <label for="">Address</label>
+         {{check_form.address}}
+        <label for="">Country</label>
+         {{check_form.country}}
+         <label for="">City</label>
+        {{check_form.city}}
+         <label for="">Zipcode</label>
+        {{check_form.zipcode}}
+        
+        <div class="row">
+        <div class="col-50">
         </div>
-    </div>
-</div>
+        </div>
+        </div>
+        <div class="col-50">
+        <h3>Payment</h3>
+        <label for="">Card name</label>
+        
+        {{check_form.name}}
+        <label for="">Number</label>
+        
+        {{check_form.number}}
+        <label for="">Exp Month</label>
+        
+        {{check_form.exp_month}}
+        <label for="">Exp Year</label>
+        
+        {{check_form.exp_year}}
+        <label for="">Name</label>
+        
+        {{check_form.name}}
+        </div>
+        <div class="row">
+        <div class="col-50">
+        <label for="">Exp Year</label>
+        </form>
+        <div class="col-50">
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <label style="text-align:center, margin-left:90px;">
+        <input type="submit" value="Complete checkout" class="btn" style="background-color:green;padding:12px,margin:10px 0,text-align:center,border:none;width:20%;border-radius:10px;cursor:pointer;font-size:18px;">
+        </label>
+        </form>
+        </div>
+        </div>
+        <div class="col-25">
+        <div class="container">
+         <h4>Cart <span class="price" style="color:white"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+         <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+         <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+         <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+         <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+         <hr>
+        <p class="total">Total <span class="price" style="color:#fff"><b>$30</b></span></p>
+        </div>
+        </div>
+        </div>
     
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
