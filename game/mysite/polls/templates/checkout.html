@@ -1,12 +1,9 @@
-<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://kit.fontawesome.com/80c4d78725.js" crossorigin="anonymous"></script>
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.5/swiper-bundle.min.css"/>
-<link href='https://unplug.com/boxicons@2.0.8/css/boxicons.min.css' rel='stylesheet'>
 <title>Customer Form</title>
 {% load static %}
 <link rel="stylesheet" href="{% static 'checkout.css' %}">
@@ -29,11 +26,6 @@
 {{check_form.city}}
 <label for="">Zipcode</label>
 {{check_form.zipcode}}
-</form>
-<div class="row">
-<div class="col-50">
-</div>
-</div>
 </div>
 <div class="col-50">
 <h3>Payment</h3>
@@ -47,21 +39,12 @@
 {{check_form.exp_year}}
 <label for="">Name</label>
 {{check_form.name}}
-<div class="icon-container">
-</div>
-<div class="row">
-<div class="col-50">
 </form>
-<div class="col-50">
-</div>
-</div>
-</div>
-</div>
 </div>
 <label>
 <input type="submit" value="Complete checkout" class="btn">
 </label>
-</form>
+</div>
 </div>
 </div>
 <div class="col-25">
@@ -73,7 +56,6 @@
 <p><a href="#">Product 4</a> <span class="price">$2</span></p>
 <hr>
 <p class="total">Total <span class="price" style="color:#fff"><b>$30</b></span></p>
-</div>
 </div>
 </div>
 </body>
