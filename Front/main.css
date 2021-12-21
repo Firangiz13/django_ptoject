@@ -67,27 +67,13 @@ a:hover{
  display:none;
     }
 }
-.hero{
-    width:100%;
-    height:calc(100vh-120px);
-    background-image: url("./hero.jpg");
-    background-size:cover;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.subheading{
-    margin-top:20px;
-    padding-bottom:140px;
+.heading{
     text-align: center;
-    align-items: center;
-    color:#fff;
-    text-transform: capitalize;
-    font-size:35px;
-    font-weight:300;
-
+    color: green;
+    font-size: 48px;
+    margin-top: 10px;
 }
+
 .product{
     position: relative;
     overflow: hidden;
@@ -145,52 +131,75 @@ a:hover{
     opacity:0;
 }
 .product-card:hover .card-btn{
-        opacity:1;
+    opacity:1;
 }
 .card-btn:hover{
-    background:#efefef;
+    background:antiquewhite;
+    color:green;
 
+}
+h5{
+    font-size:14px;
+    color:green;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .product-info{
     width:100%;
     height:100px;
+    text-align: center;
+    color: goldenrod;
     padding-top:10px;
 }
 .product-desc{
     width:100%;
     height:20px;
+    text-align: center;
     line-height:20px;
     overflow:hidden;
     opacity:0.5s;
+    color:gray;
     text-transform: capitalize;
     font-size: 18px;
     margin:5px 0;
 
 }
-.price{
+.prize{
     font-weight: 900px;
     font-size:20px;
+    color:#383838;
 }
 .actual-prize{
     margin-left:20px;
     opacity:0.5s;
+    color:#383838;
     text-decoration:line-through ;
 
 }
-.size-radio{
-    display: inline-block;
-    width:80px;
-    height:80px;
-    text-align:center;
-    font-size:20px;
-    border:1px solid #383838;
-    border-radius:50%;
-    margin:10px;
-    margin-left:0;
-    line-height:80px;
-    text-transform:uppercase;
-    color:#383838;
-    cursor:pointer;
+
+.hero{
+    width:100%;
+    height:100%;
+    background-image: url("./hero1.jpg");
+    background-size:cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.navbar1{
+    height:100%;
+    width:100%;
+}
+.subheading{
+    margin-top:200px; 
+    padding-bottom:140px;
+    text-align: center;
+    align-items: center;
+    color:#fff;
+    text-transform: capitalize;
+    font-size:35px;
+    font-weight:300;
+
 }
 .heros{
     position:relative;
@@ -231,14 +240,14 @@ a:hover{
     color:#383838
 
 }
- span{
+span{
 font-size:14px;
 color: white;
 }
 .heros .contents p{
     margin: 1rem 0 1rem;
-    width:70%;
-    font-size:14px;
+    width:100%;
+    font-size:3rem;
     margin-top:30px;
     color:#69ae14;
     margin-left:30px;
