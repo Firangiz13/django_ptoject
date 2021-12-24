@@ -42,6 +42,12 @@ class Order(models.Model):
 
     def __str__(self):
         return str(self.id)
+
+    @property
+    def shipping(self):
+        shipping = True
+        orderitems = self.orderitem_set.all()
+        return shipping
     
     @property
     def get_cart_total(self):
@@ -62,11 +68,11 @@ class OrderItem(models.Model):
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.product.title
+        return self.Product.title
 
     @property
     def get_total(self):
-        total = self.product.price * self.quantity
+        total = self.Product.price * self.quantity
         return total
 
 class ShippingAddress(models.Model):

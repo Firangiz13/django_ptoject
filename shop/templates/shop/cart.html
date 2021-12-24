@@ -26,14 +26,16 @@
                     </tr>
                 </thead>
                 <tbody>
+                    {%for item in items%}
                     <tr>
                         <td><a href="#"><i class="fas fa-trash alt"></i></a></td>
-                        <td><img src={% static "Dress5.jpg" %} alt=""></td>
-                        <td><h5>Highly fitted dress</h5></td>
-                        <td><h5>$80</h5></td>
-                        <td><input class="w-25 pl-1" value="1" type="number"></td>
-                        <td><h5>$80.00</h5></td>
+                        <td><img src="" alt="">item.image</td>
+                        <td><h5>item.description</h5></td>
+                        <td><h5>item.price</h5></td>
+                        <td><input class="w-25 pl-1" value="1" type="number">item.quantity</td>
+                        <td><h5></h5></td>
                     </tr>
+                    {%endfor%}
                 </tbody>
             </table>
         </section>
